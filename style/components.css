@@ -1,0 +1,218 @@
+/* ══════════════════════════════════════════
+   COMPONENTS — Buttons, Cards, Form, Pills
+══════════════════════════════════════════ */
+
+/* ── Buttons ── */
+.btn { border-radius: 14px; padding: .82rem 1.15rem; transition: .25s ease; }
+
+.btn-silver {
+  border: 1px solid rgba(255,255,255,.14);
+  background: linear-gradient(180deg, #f5f5f7, #b7b9bf);
+  color: #101116;
+  font-weight: 800;
+  box-shadow: 0 15px 35px rgba(255, 255, 255, .08);
+}
+
+.btn-silver:hover {
+  color: #050507;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(255, 255, 255, .14);
+}
+
+.btn-ghost {
+  color: var(--text);
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .12);
+  font-weight: 700;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255,255,255,.2);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ── Eyebrow ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  color: var(--silver);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .45rem .8rem;
+  background: rgba(255, 255, 255, .035);
+  font-weight: 700;
+  font-size: .86rem;
+}
+
+/* ── Pulse dot ── */
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--silver);
+  box-shadow: 0 0 0 0 rgba(214, 215, 219, .45);
+  animation: pulse 2.3s infinite;
+}
+
+/* ── Glass / Stat cards ── */
+.glass-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.stat-card {
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  min-height: 145px;
+}
+
+.stat-card h3 {
+  font-weight: 800;
+  letter-spacing: -.04em;
+  color: var(--silver);
+  margin-bottom: .4rem;
+}
+
+.stat-card span { color: var(--muted); }
+
+/* ── Service cards ── */
+.service-card {
+  position: relative;
+  height: 100%;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: .28s ease;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% 30%;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255,255,255,.13), transparent 65%);
+  opacity: 0;
+  transition: .28s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--line-strong);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
+}
+
+.service-card:hover::after { opacity: 1; }
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -.035em;
+  margin-bottom: .8rem;
+}
+
+.service-card p { color: var(--muted); line-height: 1.7; margin-bottom: 1.15rem; }
+
+/* ── Icon box ── */
+.icon-box {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.05));
+  border: 1px solid rgba(255,255,255,.08);
+  color: var(--silver);
+  font-size: 1.35rem;
+  margin-bottom: 1.45rem;
+}
+
+/* ── Mini list ── */
+.mini-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: .6rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.mini-list li { display: flex; gap: .6rem; }
+.mini-list i  { color: var(--silver); margin-top: .22rem; }
+
+/* ── Package cards ── */
+.package-card {
+  padding: 2rem;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  height: 100%;
+  position: relative;
+}
+
+.package-card.featured {
+  border-color: rgba(255,255,255,.28);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.14), transparent 36%),
+    linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
+  transform: translateY(-10px);
+}
+
+.package-card h3 { font-weight: 800; letter-spacing: -.045em; margin-bottom: .8rem; }
+.package-card p  { color: var(--muted); line-height: 1.7; }
+
+.package-badge {
+  display: inline-flex;
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid var(--line);
+  color: var(--silver);
+  font-size: .78rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* ── Tech pills ── */
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .75rem .95rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+  margin: .35rem;
+  font-weight: 700;
+}
+
+/* ── Form ── */
+.form-control,
+.form-select {
+  color: var(--text);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 14px;
+  padding: .9rem 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: var(--text);
+  background: rgba(255,255,255,.075);
+  border-color: rgba(255,255,255,.35);
+  box-shadow: 0 0 0 .25rem rgba(255,255,255,.06);
+}
+
+.form-control::placeholder { color: #7f8189; }
+
+label { color: var(--silver); font-weight: 700; margin-bottom: .45rem; }
