@@ -19,7 +19,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 991px) {
-  .hero                   { padding: 130px 0 70px; min-height: auto; }
+  .hero                   { padding: 130px 0 70px; min-height: 100svh; }
   .hero-visual            { min-height: 420px; margin-top: 2rem; }
   .package-card.featured  { transform: none; }
   .section-padding        { padding: 78px 0; }

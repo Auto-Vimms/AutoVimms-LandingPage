@@ -5,6 +5,7 @@
 /* ── Navbar ── */
 .navbar {
   background: rgba(8, 9, 12, .78);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
@@ -52,11 +53,16 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding-top: 100px;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
+}
+
+@supports (min-height: 100dvh) {
+  .hero { min-height: 100dvh; }
 }
 
 .hero h1 {
